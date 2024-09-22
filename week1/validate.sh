@@ -1,13 +1,12 @@
-nickname=$1
-expected_branch="week1-${nickname}"
-
 current_branch=$(git branch --show-current)
 
-if [ "$current_branch" == "$expected_branch" ]; then
+if [[ "$current_branch" == week1-* ]]; then
     echo "   ✅ 브랜치 이름이 올바릅니다: $current_branch"
 else
-    echo "   ❌ 브랜치 이름이 잘못되었습니다.\n   현재 브랜치 이름은 $current_branch 이며, 브랜치 이름은 $expected_branch 로 표기되어야 해요!"
+    echo -e "   ❌ 브랜치 이름이 잘못되었습니다.\n   현재 브랜치 이름은 $current_branch 이며, week1-닉네임 형식이어야 해요!"
     exit 1
+fi
+
 fi
 
 if [ -f "week1.md" ]; then
