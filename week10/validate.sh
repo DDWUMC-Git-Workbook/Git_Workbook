@@ -13,7 +13,7 @@ else
 fi
 
 
-if [ "$(git reflog | grep -c "rebase")" -eq 0 ]; then
+if [ "$(git reflog | grep -c "pull")" -eq 0 ]; then
     echo -e "   ❌ pull 내역이 확인되지 않았습니다."
     exit 1
 else
