@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>YONG TODO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>YONG TODO</h1>
+
+    <!-- 입력창 & 버튼 -->
+    <div class="input-container">
+        <input type="text" id="taskInput" placeholder="할 일 입력">
+        <button id="addTask">할 일 추가</button>
+    </div>
+
+    <!-- 할 일 & 완료 목록 -->
+    <div class="todo-container">
+        <article class="todo-section">
+            <h2>할 일</h2>
+            <ul id="todoList"></ul>
+        </article>
+        <article class="todo-section">
+            <h2>완료</h2>
+            <ul id="completedList"></ul>
+        </article>
+    </div>
+
+    <script src="todolist.js"></script>
+</body>
+</html>
